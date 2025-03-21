@@ -1,1 +1,11 @@
+# Python Environment and important information
 .env
+myenv
+
+# Ignore Cache
+Python/__pycache__
+*.pyc
+*.pyo
+
+# Database file
+Database/movie_database.db
