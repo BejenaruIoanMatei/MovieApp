@@ -1,11 +1,21 @@
 # MovieApp
 
-## Project Requirements
+### Project Overview
 
-Client-server graphical application that:
+MovieApp is a client-server application that allows users to search for movies and view detailed information, including ratings, trailers, and reviews.
+
+## Technologies Used
+
+- Python, tkinter for the GUI
+- SQLite for the database
+- Additional:
+  - HTML for the reviews page
+  - Bash script to streamline app execution
+
+### Features
 
 - Takes a movie title as input from the client
-- The server returns the movie rating from a database
+- Server returns the movie's rating from a local SQLite database
 - If the movie is not found, the server will:
   - Fetch the rating from TMDB API (if available)
   - Add the movie to the database for future queries
@@ -16,13 +26,7 @@ Client-server graphical application that:
   - Searching by movie name
   - Actor name (actors integrated in the database)
 
-## What did i use ?
-
-- Python, tkinter for the GUI
-- SQLite for the database
-- Additional: Html for the reviews page and a bash script for running the app
-
-### Make sure before trying to execute the script
+### Setup Instructions
 
 - Database:
   - In Database create "movie_database.db"
