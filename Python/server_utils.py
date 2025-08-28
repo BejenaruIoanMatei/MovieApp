@@ -1,10 +1,17 @@
 import requests
 import sqlite3
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key_value = os.getenv("TMDB_API_KEY")
+if not api_key_value:
+    raise ValueError("TMDB_API_KEY lipseste din .env")
 
 def search_movie(title):
     """Cauta filmul in TMDB API (ret orice film ce contine title in nume)"""
     
-    API_KEY = "your_api_key_here" 
+    API_KEY = api_key_value
     BASE_URL = "https://api.themoviedb.org/3"
     url = f"{BASE_URL}/search/movie"
     params = {
@@ -104,7 +111,7 @@ def delete_movies_with_zero_rating(database):
 def search_actor_id(actor_name):
     """TMDB API pentru ID ul unui actor"""
     
-    API_KEY = "your_api_key_here"
+    API_KEY = api_key_value
     BASE_URL = "https://api.themoviedb.org/3"
     url = f"{BASE_URL}/search/person"
     params = {
@@ -130,7 +137,7 @@ def search_actor_id(actor_name):
 def get_actor_movies(actor_id):
     """Filmele in care joaca actorul cu ID ul dat ca param"""
     
-    API_KEY = "your_api_key_here"
+    API_KEY = api_key_value
     BASE_URL = "https://api.themoviedb.org/3"
     url = f"{BASE_URL}/person/{actor_id}/movie_credits"
     params = {"api_key": API_KEY}
@@ -275,7 +282,7 @@ def get_movies_by_actor_from_database(database, actor_name):
 def get_movie_trailer(movie_name):
     """Cauta trailerul unui film pe TMDB"""
     
-    API_KEY = "your_api_key_here"
+    API_KEY = api_key_value
     try:
         search_url = "https://api.themoviedb.org/3/search/movie"
         search_params = {
@@ -310,7 +317,7 @@ def get_movie_trailer(movie_name):
         return f"A aparut o eroare: {e}"
 
 def get_movie_reviews(movie_id):
-    API_KEY = "your_api_key_here"
+    API_KEY = api_key_value
 
     url = f"https://api.themoviedb.org/3/movie/{movie_id}/reviews"
     params = {"api_key": API_KEY, "language": "en-US", "page": 1}
