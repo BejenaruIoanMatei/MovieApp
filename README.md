@@ -3,7 +3,7 @@
 ### Project Overview
 
 MovieApp is a client-server application that allows users to search for movies and view detailed information, including ratings, trailers, and reviews.
-> **Watch the Demo here**: [MovieAppDemo](https://drive.google.com/file/d/1MgrZa6bIkOLnwRyatOvjcFFpVHF7rdx-/view?usp=sharing)
+> **Watch the Demo here**: [MovieAppDemo](https://drive.google.com/file/d/1Sn_-GdpRzhfsbNuOk6TOWTRLCI3-pvML/view?usp=sharing)
 
 ## Technologies Used
 
