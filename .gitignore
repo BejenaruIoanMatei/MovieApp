@@ -1,6 +1,7 @@
 # Python Environment and important information
 .env
 myenv
+.venv
 
 # Ignore Cache
 Python/__pycache__

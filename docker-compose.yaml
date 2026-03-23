@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: python_movie_app
+    command: tail -f /dev/null
+    volumes:
+      - ./Python:/app/Python/
+    env_file:
+      - .env
